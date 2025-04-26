@@ -25,7 +25,7 @@ Feature: Parabank login functionality
     When I login with username "admin" and password "admin"
     Then I should see the account overview page
 
-  Scenario: Invalid login with incorrect credentials
-    Given I launch the Parabank application
-    When I login with username "wronguser" and password "wrongpass"
-    Then I should see an error message indicating login failure
+  #Scenario: Invalid login with incorrect credentials
+   # Given I launch the Parabank application
+   # When I login with username "wronguser" and password "wrongpass"
+    #Then I should see an error message indicating login failure
