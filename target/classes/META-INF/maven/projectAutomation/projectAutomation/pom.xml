@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>projectAutomation</groupId>
+  <artifactId>projectAutomation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.7.3</version> <!-- Make sure the version is up to date -->
+            <executions>
+                <execution>
+                    <id>execution</id>
+                    <phase>verify</phase> <!-- This runs after tests -->
+                    <goals>
+                        <goal>generate</goal> <!-- Goal to generate the report -->
+                    </goals>
+                    <configuration>
+                        <projectName>Parabank Test Report</projectName> <!-- Report Name -->
+                        <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory> <!-- Directory to save the report -->
+                        <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput> <!-- Path to the cucumber JSON result -->
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+
+   <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.20.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.16.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.16.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    
+    
+    
+    
+</project>
